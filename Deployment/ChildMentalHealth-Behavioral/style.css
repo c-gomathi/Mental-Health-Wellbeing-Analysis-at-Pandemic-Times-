@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Mar 28 17:45:58 2022
+
+@author: Deepali Garg
+"""
+
+.title{background-color:#74992e ;
+  padding:10px ;
+  margin-top: 50px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.form{background-color:#F7F5F2 ;
+  padding:10px ;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.output{background-color:#74992e ;
+  padding:10px ;
+  text-align: center;
+  font-size: 20px;
+}

@@ -1,0 +1,606 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Mar 28 15:23:32 2022
+
+@author: Deepali Garg
+"""
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Transportation prediction</title>
+    <!-- <link rel="stylesheet" href="static/style.css"> -->
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'style.css')}}">
+  </head>
+  <body>
+    <div class='title'>
+      <h2 style="color:green;text-align:center;">Emotional Difficulty Prediction</h2>
+      
+      </div>
+ <!-- method="post" -->
+    <div class ='form'>
+      <form class="" action="/result" method="post">
+        <label style="text-align:center;"  class="form-label" for="going2school">Going to school</label>
+        <br>
+        <div class = "from-check from-check-inline">
+        <input name = 'going2school' class="from-check-input" type="checkbox" value="1" 
+        <label class ="from-check-label" for = "going2school">I am in a different school from my own school</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'going2school' class="from-check-input" type="checkbox" value="1" 
+        <label class ="from-check-label" for = "going2school">Yes, sometimes</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'going2school' class="from-check-input" type="checkbox" value="1" 
+        <label class ="from-check-label" for = "going2school">Yes, most days of the week</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'going2school' class="from-check-input" type="checkbox" value="0" 
+        <label class ="from-check-label" for = "going2school">No, I am at home</label>
+        </div>
+       
+       <br>
+        <label style="text-align:center;"  class="form-label" for="bf_yesterday">Breakfast yesterday</label>
+        <br>
+        <div class = "from-check from-check-inline">
+        <input name = 'bf_yesterday' class="from-check-input" type="checkbox" value="1" 
+        <label class ="from-check-label" for = "bf_yesterday">Healthy cereal</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'bf_yesterday' class="from-check-input" type="checkbox" value="2" 
+        <label class ="from-check-label" for = "bf_yesterday">Fruits</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'bf_yesterday' class="from-check-input" type="checkbox" value="3" 
+        <label class ="from-check-label" for = "bf_yesterday">Cooked breakfast</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'bf_yesterday' class="from-check-input" type="checkbox" value="4" 
+        <label class ="from-check-label" for = "bf_yesterday">Toast</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'bf_yesterday' class="from-check-input" type="checkbox" value="5" 
+        <label class ="from-check-label" for = "bf_yesterday">Sugary cereal</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'bf_yesterday' class="from-check-input" type="checkbox" value="6" 
+        <label class ="from-check-label" for = "bf_yesterday">Nothing</label>
+        </div>
+       
+       <br>
+        <label style="text-align:center;"  class="form-label" for="fruit&vegitable_yesterday">fruit & vegitable yesterday</label>
+        <br>
+        <div class = "from-check from-check-inline">
+        <input name = 'fruit&vegitable_yesterday' class="from-check-input" type="checkbox" value="1" 
+        <label class ="from-check-label" for = "fruit&vegitable_yesterday">1 Piece</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'fruit&vegitable_yesterday' class="from-check-input" type="checkbox" value="2" 
+        <label class ="from-check-label" for = "fruit&vegitable_yesterday">1</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'fruit&vegitable_yesterday' class="from-check-input" type="checkbox" value="3" 
+        <label class ="from-check-label" for = "fruit&vegitable_yesterday">2</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'fruit&vegitable_yesterday' class="from-check-input" type="checkbox" value="4" 
+        <label class ="from-check-label" for = "fruit&vegitable_yesterday">2 Or More Fruit and Veg</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'fruit&vegitable_yesterday' class="from-check-input" type="checkbox" value="0" 
+        <label class ="from-check-label" for = "fruit&vegitable_yesterday">No</label>
+        </div>
+       
+       <br>
+        <label style="text-align:center;"  class="form-label" for="sports_or_exer">Sports or exercise</label>
+        <br>
+        <div class = "from-check from-check-inline">
+        <input name = 'sports_or_exer' class="from-check-input" type="checkbox" value="0" 
+        <label class ="from-check-label" for = "sports_or_exer">0 days</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'sports_or_exer' class="from-check-input" type="checkbox" value="2" 
+        <label class ="from-check-label" for = "sports_or_exer">1-2 days</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'sports_or_exer' class="from-check-input" type="checkbox" value="4" 
+        <label class ="from-check-label" for = "sports_or_exer">3-4 days</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'sports_or_exer' class="from-check-input" type="checkbox" value="6" 
+        <label class ="from-check-label" for = "sports_or_exer">5-6 days</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'sports_or_exer' class="from-check-input" type="checkbox" value="7" 
+        <label class ="from-check-label" for = "sports_or_exer">7 days</label>
+        </div>
+       
+       <br>
+       <label style="text-align:center;"  class="form-label" for="feel_tired">Feel tired</label>
+       <br>
+       <div class = "from-check from-check-inline">
+       <input name = 'feel_tired' class="from-check-input" type="checkbox" value="0" 
+       <label class ="from-check-label" for = "feel_tired">0 days</label>
+       </div>
+       <div class = "from-check from-check-inline">
+       <input name = 'feel_tired' class="from-check-input" type="checkbox" value="2" 
+       <label class ="from-check-label" for = "feel_tired">1-2 days</label>
+       </div>
+       <div class = "from-check from-check-inline">
+       <input name = 'feel_tired' class="from-check-input" type="checkbox" value="4" 
+       <label class ="from-check-label" for = "feel_tired">3-4 days</label>
+       </div>
+       <div class = "from-check from-check-inline">
+       <input name = 'feel_tired' class="from-check-input" type="checkbox" value="6" 
+       <label class ="from-check-label" for = "feel_tired">5-6 days</label>
+       </div>
+       <div class = "from-check from-check-inline">
+       <input name = 'feel_tired' class="from-check-input" type="checkbox" value="7" 
+       <label class ="from-check-label" for = "feel_tired">7 days</label>
+       </div>
+      
+      <br>
+      <br>
+      <label style="text-align:center;"  class="form-label" for="attentive_in_school_work">Attentive in school work</label>
+      <br>
+      <div class = "from-check from-check-inline">
+      <input name = 'attentive_in_school_work' class="from-check-input" type="checkbox" value="0" 
+      <label class ="from-check-label" for = "attentive_in_school_work">0 days</label>
+      </div>
+      <div class = "from-check from-check-inline">
+      <input name = 'attentive_in_school_work' class="from-check-input" type="checkbox" value="2" 
+      <label class ="from-check-label" for = "attentive_in_school_work">1-2 days</label>
+      </div>
+      <div class = "from-check from-check-inline">
+      <input name = 'attentive_in_school_work' class="from-check-input" type="checkbox" value="4" 
+      <label class ="from-check-label" for = "attentive_in_school_work">3-4 days</label>
+      </div>
+      <div class = "from-check from-check-inline">
+      <input name = 'attentive_in_school_work' class="from-check-input" type="checkbox" value="6" 
+      <label class ="from-check-label" for = "attentive_in_school_work">5-6 days</label>
+      </div>
+      <div class = "from-check from-check-inline">
+      <input name = 'attentive_in_school_work' class="from-check-input" type="checkbox" value="7" 
+      <label class ="from-check-label" for = "attentive_in_school_work">7 days</label>
+      </div>
+     
+     <br>
+      <br>
+      <label style="text-align:center;"  class="form-label" for="fizzy_drink">Fizzy drink</label>
+      <br>
+      <div class = "from-check from-check-inline">
+      <input name = 'fizzy_drink' class="from-check-input" type="checkbox" value="0" 
+      <label class ="from-check-label" for = "fizzy_drink">0 days</label>
+      </div>
+      <div class = "from-check from-check-inline">
+      <input name = 'fizzy_drink' class="from-check-input" type="checkbox" value="2" 
+      <label class ="from-check-label" for = "fizzy_drink">1-2 days</label>
+      </div>
+      <div class = "from-check from-check-inline">
+      <input name = 'fizzy_drink' class="from-check-input" type="checkbox" value="4" 
+      <label class ="from-check-label" for = "fizzy_drink">3-4 days</label>
+      </div>
+      <div class = "from-check from-check-inline">
+      <input name = 'fizzy_drink' class="from-check-input" type="checkbox" value="6" 
+      <label class ="from-check-label" for = "fizzy_drink">5-6 days</label>
+      </div>
+      <div class = "from-check from-check-inline">
+      <input name = 'fizzy_drink' class="from-check-input" type="checkbox" value="7" 
+      <label class ="from-check-label" for = "fizzy_drink">7 days</label>
+      </div>
+     
+     <br>
+      <br>
+      <label style="text-align:center;"  class="form-label" for="sugary_snack">Sugary snack</label>
+      <br>
+      <div class = "from-check from-check-inline">
+      <input name = 'sugary_snack' class="from-check-input" type="checkbox" value="0" 
+      <label class ="from-check-label" for = "sugary_snack">0 days</label>
+      </div>
+      <div class = "from-check from-check-inline">
+      <input name = 'sugary_snack' class="from-check-input" type="checkbox" value="2" 
+      <label class ="from-check-label" for = "sugary_snack">1-2 days</label>
+      </div>
+      <div class = "from-check from-check-inline">
+      <input name = 'sugary_snack' class="from-check-input" type="checkbox" value="4" 
+      <label class ="from-check-label" for = "sugary_snack">3-4 days</label>
+      </div>
+      <div class = "from-check from-check-inline">
+      <input name = 'sugary_snack' class="from-check-input" type="checkbox" value="6" 
+      <label class ="from-check-label" for = "sugary_snack">5-6 days</label>
+      </div>
+      <div class = "from-check from-check-inline">
+      <input name = 'sugary_snack' class="from-check-input" type="checkbox" value="7" 
+      <label class ="from-check-label" for = "sugary_snack">7 days</label>
+      </div>
+     
+     <br> 
+      <br>
+      <label style="text-align:center;"  class="form-label" for="take_away_food">Take away food</label>
+      <br>
+      <div class = "from-check from-check-inline">
+      <input name = 'take_away_food' class="from-check-input" type="checkbox" value="0" 
+      <label class ="from-check-label" for = "take_away_food">0 days</label>
+      </div>
+      <div class = "from-check from-check-inline">
+      <input name = 'take_away_food' class="from-check-input" type="checkbox" value="2" 
+      <label class ="from-check-label" for = "take_away_food">1-2 days</label>
+      </div>
+      <div class = "from-check from-check-inline">
+      <input name = 'take_away_food' class="from-check-input" type="checkbox" value="4" 
+      <label class ="from-check-label" for = "take_away_food">3-4 days</label>
+      </div>
+      <div class = "from-check from-check-inline">
+      <input name = 'take_away_food' class="from-check-input" type="checkbox" value="6" 
+      <label class ="from-check-label" for = "take_away_food">5-6 days</label>
+      </div>
+      <div class = "from-check from-check-inline">
+      <input name = 'take_away_food' class="from-check-input" type="checkbox" value="7" 
+      <label class ="from-check-label" for = "take_away_food">7 days</label>
+      </div>
+     
+     <br> 
+      <label style="text-align:center;"  class="form-label" for="play_outside">Play outside</label>
+      <br>
+      <div class = "from-check from-check-inline">
+      <input name = 'play_outside' class="from-check-input" type="checkbox" value="1" 
+      <label class ="from-check-label" for = "play_outside">A few days each week</label>
+      </div>
+      <div class = "from-check from-check-inline">
+      <input name = 'play_outside' class="from-check-input" type="checkbox" value="2" 
+      <label class ="from-check-label" for = "play_outside">Hardly ever</label>
+      </div>
+      <div class = "from-check from-check-inline">
+      <input name = 'play_outside' class="from-check-input" type="checkbox" value="3" 
+      <label class ="from-check-label" for = "play_outside">I don't play</label>
+      </div>
+      <div class = "from-check from-check-inline">
+      <input name = 'play_outside' class="from-check-input" type="checkbox" value="4" 
+      <label class ="from-check-label" for = "play_outside">Mosty days</label>
+      </div>
+     
+     <br> 
+      <label style="text-align:center;"  class="form-label" for="playarea">Playarea</label>
+      <br>
+      <div class = "from-check from-check-inline">
+      <input name = 'playarea' class="from-check-input" type="checkbox" value="1" 
+      <label class ="from-check-label" for = "playarea">In my house</label>
+      </div>
+      <div class = "from-check from-check-inline">
+      <input name = 'playarea' class="from-check-input" type="checkbox" value="2" 
+      <label class ="from-check-label" for = "playarea">my garden</label>
+      </div>
+      <div class = "from-check from-check-inline">
+      <input name = 'playarea' class="from-check-input" type="checkbox" value="3" 
+      <label class ="from-check-label" for = "playarea">a local grassy area</label>
+      </div>
+      <div class = "from-check from-check-inline">
+      <input name = 'playarea' class="from-check-input" type="checkbox" value="4" 
+      <label class ="from-check-label" for = "playarea">with bushes, trees and flowers</label>
+      </div>
+       <div class = "from-check from-check-inline">
+       <input name = 'playarea' class="from-check-input" type="checkbox" value="5" 
+       <label class ="from-check-label" for = "playarea">bike or skate park</label>
+       </div>
+       
+      <br>
+      
+        <label style="text-align:center;"  class="form-label" for="space_to_relex">Space to relex</label>
+        <br>
+        <div class = "from-check from-check-inline">
+        <input name = 'space_to_relex' class="from-check-input" type="checkbox" value="0" 
+        <label class ="from-check-label" for = "space_to_relex">No</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'space_to_relex' class="from-check-input" type="checkbox" value="1" 
+        <label class ="from-check-label" for = "space_to_relex">Sometimes but not all the time</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'space_to_relex' class="from-check-input" type="checkbox" value="2" 
+        <label class ="from-check-label" for = "space_to_relex">Yes</label>
+        </div>
+        <br> 
+        <label style="text-align:center;"  class="form-label" for="doing_well_with_my_school_work">Doing well with my school work</label>
+        <br>
+        <div class = "from-check from-check-inline">
+        <input name = 'doing_well_with_my_school_work' class="from-check-input" type="checkbox" value="1" 
+        <label class ="from-check-label" for = "doing_well_with_my_school_work">Strongly agree</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'doing_well_with_my_school_work' class="from-check-input" type="checkbox" value="2" 
+        <label class ="from-check-label" for = "doing_well_with_my_school_work">Agree</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'doing_well_with_my_school_work' class="from-check-input" type="checkbox" value="3" 
+        <label class ="from-check-label" for = "doing_well_with_my_school_work">Disagree</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'doing_well_with_my_school_work' class="from-check-input" type="checkbox" value="4" 
+        <label class ="from-check-label" for = "doing_well_with_my_school_work">Strongly disagree</label>
+        </div>
+         <div class = "from-check from-check-inline">
+         <input name = 'doing_well_with_my_school_work' class="from-check-input" type="checkbox" value="5" 
+         <label class ="from-check-label" for = "doing_well_with_my_school_work">Don't agree or disagree</label>
+         </div>
+         
+        <br>
+        <label style="text-align:center;"  class="form-label" for="part_of_my_school_community">Part of my school community</label>
+        <br>
+        <div class = "from-check from-check-inline">
+        <input name = 'part_of_my_school_community' class="from-check-input" type="checkbox" value="1" 
+        <label class ="from-check-label" for = "part_of_my_school_community">Strongly agree</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'part_of_my_school_community' class="from-check-input" type="checkbox" value="2" 
+        <label class ="from-check-label" for = "part_of_my_school_community">Agree</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'part_of_my_school_community' class="from-check-input" type="checkbox" value="3" 
+        <label class ="from-check-label" for = "part_of_my_school_community">Disagree</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'part_of_my_school_community' class="from-check-input" type="checkbox" value="4" 
+        <label class ="from-check-label" for = "part_of_my_school_community">Strongly disagree</label>
+        </div>
+         <div class = "from-check from-check-inline">
+         <input name = 'part_of_my_school_community' class="from-check-input" type="checkbox" value="5" 
+         <label class ="from-check-label" for = "part_of_my_school_community">Don't agree or disagree</label>
+         </div>
+         
+        <br>
+        <label style="text-align:center;"  class="form-label" for="lots_of_choice_that_are_important_for_me">Lots of choice that are important for me</label>
+        <br>
+        <div class = "from-check from-check-inline">
+        <input name = 'lots_of_choice_that_are_important_for_me' class="from-check-input" type="checkbox" value="1" 
+        <label class ="from-check-label" for = "lots_of_choice_that_are_important_for_me">Strongly agree</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'lots_of_choice_that_are_important_for_me' class="from-check-input" type="checkbox" value="2" 
+        <label class ="from-check-label" for = "lots_of_choice_that_are_important_for_me">Agree</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'lots_of_choice_that_are_important_for_me' class="from-check-input" type="checkbox" value="3" 
+        <label class ="from-check-label" for = "lots_of_choice_that_are_important_for_me">Disagree</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'lots_of_choice_that_are_important_for_me' class="from-check-input" type="checkbox" value="4" 
+        <label class ="from-check-label" for = "lots_of_choice_that_are_important_for_me">Strongly disagree</label>
+        </div>
+         <div class = "from-check from-check-inline">
+         <input name = 'lots_of_choice_that_are_important_for_me' class="from-check-input" type="checkbox" value="5" 
+         <label class ="from-check-label" for = "lots_of_choice_that_are_important_for_me">Don't agree or disagree</label>
+         </div>
+         
+        <br>
+        <label style="text-align:center;"  class="form-label" for="There_are_lots_of_things_I_am_good_at">There are lots of things I am good at</label>
+        <br>
+        <div class = "from-check from-check-inline">
+        <input name = 'There_are_lots_of_things_I_am_good_at' class="from-check-input" type="checkbox" value="1" 
+        <label class ="from-check-label" for = "There_are_lots_of_things_I_am_good_at">Strongly agree</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'There_are_lots_of_things_I_am_good_at' class="from-check-input" type="checkbox" value="2" 
+        <label class ="from-check-label" for = "There_are_lots_of_things_I_am_good_at">Agree</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'There_are_lots_of_things_I_am_good_at' class="from-check-input" type="checkbox" value="3" 
+        <label class ="from-check-label" for = "There_are_lots_of_things_I_am_good_at">Disagree</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'There_are_lots_of_things_I_am_good_at' class="from-check-input" type="checkbox" value="4" 
+        <label class ="from-check-label" for = "There_are_lots_of_things_I_am_good_at">Strongly disagree</label>
+        </div>
+         <div class = "from-check from-check-inline">
+         <input name = 'There_are_lots_of_things_I_am_good_at' class="from-check-input" type="checkbox" value="5" 
+         <label class ="from-check-label" for = "There_are_lots_of_things_I_am_good_at">Don't agree or disagree</label>
+         </div>
+         
+        <br>
+         <label style="text-align:center;" class="form-label" for="school">School 1-10</label>
+         <input name = 'school'  class="form-control" type="number"step = "1-10"  placeholder="Type Here" required><br>
+        
+        <br>
+        <label style="text-align:center;"  class="form-label" for="i_feel_lonely">I feel lonely</label>
+        <br>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_feel_lonely' class="from-check-input" type="checkbox" value="0" 
+        <label class ="from-check-label" for = "i_feel_lonely">Never</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_feel_lonely' class="from-check-input" type="checkbox" value="1" 
+        <label class ="from-check-label" for = "i_feel_lonely">Sometimes</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_feel_lonely' class="from-check-input" type="checkbox" value="2" 
+        <label class ="from-check-label" for = "i_feel_lonely">Always</label>
+        </div>
+        <br>
+        <label style="text-align:center;"  class="form-label" for="i_cry_a_lot">I cry a lot</label>
+        <br>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_cry_a_lot' class="from-check-input" type="checkbox" value="0" 
+        <label class ="from-check-label" for = "i_cry_a_lot">Never</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_cry_a_lot' class="from-check-input" type="checkbox" value="1" 
+        <label class ="from-check-label" for = "i_cry_a_lot">Sometimes</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_cry_a_lot' class="from-check-input" type="checkbox" value="2" 
+        <label class ="from-check-label" for = "i_cry_a_lot">Always</label>
+        </div>
+        <br>
+        
+        <label style="text-align:center;"  class="form-label" for="i_m_unhappy">I am unhappy</label>
+        <br>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_m_unhappy' class="from-check-input" type="checkbox" value="0" 
+        <label class ="from-check-label" for = "i_m_unhappy">Never</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_m_unhappy' class="from-check-input" type="checkbox" value="1" 
+        <label class ="from-check-label" for = "i_m_unhappy">Sometimes</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_m_unhappy' class="from-check-input" type="checkbox" value="2" 
+        <label class ="from-check-label" for = "i_m_unhappy">Always</label>
+        </div>
+        <br>
+        
+        
+        <label style="text-align:center;"  class="form-label" for="i_feel_nobody_likes_me">I feel nobody likes me</label>
+        <br>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_feel_nobody_likes_me' class="from-check-input" type="checkbox" value="0" 
+        <label class ="from-check-label" for = "i_feel_nobody_likes_me">Never</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_feel_nobody_likes_me' class="from-check-input" type="checkbox" value="1" 
+        <label class ="from-check-label" for = "i_feel_nobody_likes_me">Sometimes</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_feel_nobody_likes_me' class="from-check-input" type="checkbox" value="2" 
+        <label class ="from-check-label" for = "i_feel_nobody_likes_me">Always</label>
+        </div>
+        <br>
+        
+        
+        <label style="text-align:center;"  class="form-label" for="i_worry_a_lot">I worry a lot</label>
+        <br>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_worry_a_lot' class="from-check-input" type="checkbox" value="0" 
+        <label class ="from-check-label" for = "i_worry_a_lot">Never</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_worry_a_lot' class="from-check-input" type="checkbox" value="1" 
+        <label class ="from-check-label" for = "i_worry_a_lot">Sometimes</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_worry_a_lot' class="from-check-input" type="checkbox" value="2" 
+        <label class ="from-check-label" for = "i_worry_a_lot">Always</label>
+        </div>
+        <br>
+        
+        
+        <label style="text-align:center;"  class="form-label" for="i_have_problems_sleeping">I have sleeping problems</label>
+        <br>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_have_problems_sleeping' class="from-check-input" type="checkbox" value="0" 
+        <label class ="from-check-label" for = "i_have_problems_sleeping">Never</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_have_problems_sleeping' class="from-check-input" type="checkbox" value="1" 
+        <label class ="from-check-label" for = "i_have_problems_sleeping">Sometimes</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_have_problems_sleeping' class="from-check-input" type="checkbox" value="2" 
+        <label class ="from-check-label" for = "i_have_problems_sleeping">Always</label>
+        </div>
+        <br>
+        
+        
+        <label style="text-align:center;"  class="form-label" for="i_wake_up_in_night">I wake up in night</label>
+        <br>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_wake_up_in_night' class="from-check-input" type="checkbox" value="0" 
+        <label class ="from-check-label" for = "i_wake_up_in_night">Never</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_wake_up_in_night' class="from-check-input" type="checkbox" value="1" 
+        <label class ="from-check-label" for = "i_wake_up_in_night">Sometimes</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_wake_up_in_night' class="from-check-input" type="checkbox" value="2" 
+        <label class ="from-check-label" for = "i_wake_up_in_night">Always</label>
+        </div>
+        <br>
+        
+        
+        <label style="text-align:center;"  class="form-label" for="i_am_shy">I am shy</label>
+        <br>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_am_shy' class="from-check-input" type="checkbox" value="0" 
+        <label class ="from-check-label" for = "i_am_shy">Never</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_am_shy' class="from-check-input" type="checkbox" value="1" 
+        <label class ="from-check-label" for = "i_am_shy">Sometimes</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_am_shy' class="from-check-input" type="checkbox" value="2" 
+        <label class ="from-check-label" for = "i_am_shy">Always</label>
+        </div>
+        <br>
+        
+        
+        <label style="text-align:center;"  class="form-label" for="i_feel_scared">I feel scared</label>
+        <br>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_feel_scared' class="from-check-input" type="checkbox" value="0" 
+        <label class ="from-check-label" for = "i_feel_scared">Never</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_feel_scared' class="from-check-input" type="checkbox" value="1" 
+        <label class ="from-check-label" for = "i_feel_scared">Sometimes</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_feel_scared' class="from-check-input" type="checkbox" value="2" 
+        <label class ="from-check-label" for = "i_feel_scared">Always</label>
+        </div>
+        <br>
+        
+        
+        <label style="text-align:center;"  class="form-label" for="i_worry_at_school">I worry at school</label>
+        <br>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_worry_at_school' class="from-check-input" type="checkbox" value="0" 
+        <label class ="from-check-label" for = "i_worry_at_school">Never</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_worry_at_school' class="from-check-input" type="checkbox" value="1" 
+        <label class ="from-check-label" for = "i_worry_at_school">Sometimes</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'i_worry_at_school' class="from-check-input" type="checkbox" value="2" 
+        <label class ="from-check-label" for = "i_worry_at_school">Always</label>
+        </div>
+        <br>
+        <label style="text-align:center;"  class="form-label" for="children_in_your_house_Yes">Children in your house</label>
+        <br>
+        <div class = "from-check from-check-inline">
+        <input name = 'children_in_your_house_Yes' class="from-check-input" type="checkbox" value="0" 
+        <label class ="from-check-label" for = "children_in_your_house_Yes">No</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'children_in_your_house_Yes' class="from-check-input" type="checkbox" value="1" 
+        <label class ="from-check-label" for = "children_in_your_house_Yes">Yes</label>
+        </div>
+        <br>
+        <label style="text-align:center;"  class="form-label" for="in_touch_with_friends_Yes">in touch with friends</label>
+        <br>
+        <div class = "from-check from-check-inline">
+        <input name = 'in_touch_with_friends_Yes' class="from-check-input" type="checkbox" value="0" 
+        <label class ="from-check-label" for = "in_touch_with_friends_Yes">No</label>
+        </div>
+        <div class = "from-check from-check-inline">
+        <input name = 'in_touch_with_friends_Yes' class="from-check-input" type="checkbox" value="1" 
+        <label class ="from-check-label" for = "in_touch_with_friends_Yes">Yes</label>
+        </div>
+        <br>
+        
+        <div class="d-grid gap-2">
+          <button  type="submit" class="btn btn-outline-primary" name="Predict">Predict</button>
+        </div><br>
+        <div class="output">
+          {{output}}
+        </div>
+
+
+  </body>
+</html>
